@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <title>win-win</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: white;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            float: left;
+        }
+
+
+        nav a:hover {
+            background: green;
+            color: red;
+            opacity: 0.4;
+            border-radius: 10%;
+        }
+
+    
+        .custom-row {
+            margin-bottom: 15px;
+        }
+
+        .card {
+            min-height: 100%;
+            min-width: 100%;
+            margin-bottom: 15px;
+        }
+
+
+        .card-img-top {
+            height: 200px;
+
+        }
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .transparent-element {
+            opacity: 0.9; 
+        }
+    </style> 
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-success ">
+    <div class="col-2 ">
+
+        <div class="  col-12  d-flex justify-content-center  ">
+            <div class="">
+                <div class="col p-0">
+                    <div class="avatar  text-white">
+                   <span style="font-size: 1em">
+                    <img src="../images/user.png" alt="" style="max-width: 100%; max-height:100% ;">
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-white  d-flex justify-content-center " id="welcome">
+
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="../quiz/index.html">Play<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="highscores.html">Scores<span class="sr-only">(current)</span></a></a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex flex-row justify-content-end">
+        <button class="transparent-element bg-success border-0" onclick="logout() ">
+            <div class="col btn ">
+
+                <div class="avatar  text-white d-flex justify-content-center align-items-center">
+                   <span style="font-size: 2em; display: inline-block;">
+                    <img src="../images/logout.png" alt="" style="max-width: 100%; height: auto;">
+                </span>
+                </div>
+            </div>
+        </button>
+
+    </div>
+</nav>
+<div class=" p-5 bg-white">
+    <div class="row custom-row ">
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top" src="https://kamoucha.files.wordpress.com/2013/10/monoprix.jpg" alt="Card image cap">
+                <div class=" card-body">
+                    <h5 class="card-title ">Monoprix</h5>
+                    <h5 class="card-title " >Points :<span id="monoprixHtml"></span> </h5>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top" src="https://www.graiet.tn/media/catalog/product/cache/595488aa9cf14b0e44a19e9859f2c227/c/a/carte_fid_lit_prime_1.png">
+                <div class=" card-body ">
+                    <h5 class="card-title ">Grait</h5>
+                    <h5 class="card-title ">Points : <span id="graitHtml"></span></h5>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top" src="https://maxi.cdnartwhere.eu/wp-content/uploads/article/2016-01/casino-963x542-c-default.jpg?ck=37a6259cc0c1dae299a7866489dff0bd">
+                <div class=" card-body">
+                    <h5 class="card-title ">Maxi-mag</h5>
+                    <h5 class="card-title ">Points : <span id="maxiHtml"></span></h5>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZmjILbjti4vZJJdqiVXM3EYIfHdC9FF_7s_z2mqfpA&s">
+                <div class=" card-body ">
+                    <h5 class="card-title ">Zen</h5>
+                    <h5 class="card-title ">Points : <span id="zenHtml"></span></h5>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top"  src="https://kamoucha.files.wordpress.com/2013/10/fatales-tunisie-jpg.jpg">
+                <div class=" card-body">
+                    <h5 class="card-title ">Fatales</h5>
+                    <h5 class="card-title ">Points : <span id="fatalesHtml"></span></h5>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="p-2">
+            <div class="card  " style="width: 18rem;">
+                <img class=" card-img-top"  src="data:image/jpeg;base64,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">
+                <div class=" card-body">
+                    <h5 class="card-title ">Exist</h5>
+                    <h5 class="card-title ">Points : <span id="existHtml"></span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="home_page.js"></script>
+<script src="../js/game.js"></script>
+  <script src="../js/end.js"></script>
+  <script src="../js/highscores.js"></script>
+</html>
