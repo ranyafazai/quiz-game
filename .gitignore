@@ -1,0 +1,27 @@
+# Ignore everything
+*
+
+# But include these files/folders
+!.gitignore
+!*.html
+!*.css
+!*.js
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.ico
+!*.svg
+!*.md
+!README.md
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
